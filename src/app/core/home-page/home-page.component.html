@@ -1,0 +1,96 @@
+<div class="hero">
+  <div class="left">
+    <h1>Get Moving Faster <br />Your Go-To Taxi Solution!</h1>
+    <p>
+      Get where you need to go faster with our taxi app! Simply tap, ride, and
+      arrive hassle-free. No more waiting on the curb or struggling to find a
+      cab. Reserve now for seamless travel!
+    </p>
+    <button (click)="focus(target)">Reserve</button>
+  </div>
+  <div class="right">
+    <img src="../../../assets/Taxi Slika.png" alt="taxiImage" />
+  </div>
+</div>
+<div class="formSection">
+  <div class="mapSeciton">
+    <div id="map"></div>
+  </div>
+  <div class="form" id="form" #target>
+    <form [formGroup]="form">
+      <label for="date">Date</label>
+      <input
+        type="date"
+        name="date"
+        id="date"
+        [formControl]="form.controls.date"
+      />
+      <label for="time">Time</label>
+      <input
+        type="time"
+        name="time"
+        id="time"
+        [formControl]="form.controls.time"
+      />
+      <label for="phoneNumber">Mobile number</label>
+      <input
+        type="text"
+        name="phoneNumber"
+        id="phoneNumber"
+        placeholder="+38161234567"
+        [formControl]="form.controls.phoneNumber"
+      />
+      <p>Payment method</p>
+      <div class="paymentMethod">
+        <label for="payment">Cash</label>
+        <input
+          type="radio"
+          name="payment"
+          id="payment"
+          value="cash"
+          (change)="toggleCard($event)"
+          [formControl]="form.controls.kes"
+        />
+        <label for="payment1">Card</label>
+        <input
+          type="radio"
+          name="payment"
+          id="payment1"
+          value="card"
+          (change)="toggleCard($event)"
+          [formControl]="form.controls.card"
+        />
+      </div>
+      <div class="card" *ngIf="creditCard">
+        <label for="cardNumber">Card number</label>
+        <input
+          type="text"
+          name="cardNumber"
+          id="cardNumber"
+          [formControl]="form.controls.cardNumber"
+        />
+        <label for="cardDate">Card expiration date</label>
+        <div class="wrapperCardDate">
+          <input
+            type="number"
+            name="cardDate"
+            id="cardDate"
+            placeholder="MM"
+            [formControl]="form.controls.cardMonth"
+          />
+          <input
+            type="number"
+            name="cardDate"
+            id="cardDate1"
+            placeholder="YY"
+            [formControl]="form.controls.cardYear"
+          />
+        </div>
+      </div>
+      <div class="priceAndSubmit">
+        <h4>{{ price }}€</h4>
+        <button (click)="onSubmit()" [disabled]="form.invalid">Book now</button>
+      </div>
+    </form>
+  </div>
+</div>

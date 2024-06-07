@@ -1,0 +1,47 @@
+@import "../../../vars/vars";
+
+footer {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $backgroundColor;
+
+  .logo {
+    width: 3rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      margin: 0 15px 0 0;
+    }
+    h1 {
+      font-size: 1.5rem;
+      color: $textColor;
+    }
+  }
+
+  .social {
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a:hover {
+      svg {
+        path {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    svg {
+      path {
+        fill: $mainAccentColor;
+      }
+    }
+  }
+}

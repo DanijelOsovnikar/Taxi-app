@@ -1,0 +1,20 @@
+<div class="nav">
+  <label class="hamburgerMenu">
+    <input type="checkbox" id="hamburger" />
+  </label>
+  <aside class="sidebar">
+    <nav>
+      <a [routerLink]="['/']">Home</a>
+      <a [routerLink]="['list']">Order history</a>
+    </nav>
+  </aside>
+  <a [routerLink]="['/']">
+    <img class="logo" src="../assets/logo.png" alt="logoImage" />
+    <h1>UrbanRide</h1>
+  </a>
+  <div class="navigation">
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['list']">Order history</a>
+    <div class="reserve" (click)="focus()">Reserve</div>
+  </div>
+</div>

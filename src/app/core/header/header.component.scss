@@ -1,0 +1,164 @@
+@import "../../../vars/vars";
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  position: relative;
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+
+    a {
+      text-decoration: none;
+      color: $backgroundColor;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .reserve {
+      background-color: $mainHeadingColor;
+      padding: 10px 25px;
+      border-radius: 15px;
+      color: $textColor;
+      font-weight: 700;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $hoverButtonColor;
+      }
+    }
+  }
+
+  .hamburgerMenu {
+    display: none;
+    flex-direction: column;
+    gap: $hamburgerGap;
+    width: max-content;
+    position: absolute;
+    left: 25px;
+    top: 43px;
+    z-index: 2;
+    cursor: pointer;
+
+    input {
+      width: $barWidth;
+      height: $barHeight;
+      background-color: $backgroundColor;
+      appearance: none;
+      border-radius: 10px;
+      outline: none;
+      pointer-events: none;
+      transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
+    }
+
+    input:checked {
+      opacity: 0;
+      width: 0;
+    }
+
+    &:has(input:checked)::before {
+      rotate: 45deg;
+      width: $xWidth;
+      translate: 0 calc($barHeight / -2);
+    }
+
+    &:has(input:checked)::after {
+      rotate: -45deg;
+      width: $xWidth;
+      translate: 0 calc($barHeight / 2);
+    }
+
+    &:has(input:checked) + .sidebar {
+      translate: 0;
+    }
+  }
+
+  .hamburgerMenu::before,
+  .hamburgerMenu::after {
+    content: "";
+    width: $barWidth;
+    height: $barHeight;
+    background-color: $backgroundColor;
+    border-radius: 10px;
+    transform-origin: left center;
+    transition: rotate 0.2s ease-in-out, width 0.2s ease-in-out,
+      translate 0.2s ease-in-out;
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: 3rem;
+      margin: 0 15px 0 0;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: $backgroundColor;
+      margin: unset;
+    }
+  }
+}
+.sidebar {
+  transition: translate 0.2s ease-in-out;
+  translate: -100% 0;
+  background-color: $backgroundColor;
+  width: 100%;
+  height: 91vh;
+  position: absolute;
+  top: 100px;
+  display: none;
+  z-index: 99;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    a {
+      font-size: 2rem;
+      color: $textColor;
+      text-decoration: none;
+      margin: 10px 5px;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $mainAccentColor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    .navigation {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    justify-content: center;
+    padding: 30px 0;
+    .hamburgerMenu {
+      display: flex;
+    }
+
+    .navigation {
+      display: none;
+    }
+  }
+
+  .sidebar {
+    display: block;
+  }
+}

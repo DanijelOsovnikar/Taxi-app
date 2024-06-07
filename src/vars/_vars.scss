@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+//COLORS
+
+$mainAccentColor: #fcbe03;
+$mainHeadingColor: #191920;
+$textColor: white;
+$grayColor: #dbdbdb;
+$backgroundColor: #040404;
+$hoverButtonColor: #585858;
+//TYPOGRAPHY
+
+$mainFont: "Kumbh Sans", sans-serif;
+
+//HAMBURGER MENU
+
+$barHeight: 4px;
+$barWidth: 28px;
+$hamburgerGap: 4px;
+$hamburgerHeight: calc($barHeight * 3 + $hamburgerGap * 2);
+$xWidth: calc($hamburgerHeight * 1.41421356237);

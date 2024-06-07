@@ -1,0 +1,19 @@
+@import "../vars/vars";
+
+main {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1440px;
+  position: relative;
+
+  .color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42rem;
+    height: 7rem;
+    border-bottom-left-radius: 20px;
+    background-color: $mainAccentColor;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="listWrapper">
+  <div class="list">
+    <h2>Order history</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Starting place</td>
+          <td>Destination</td>
+          <td>Date</td>
+          <td>Time</td>
+        </tr>
+      </thead>
+      <tbody>
+        @for (ride of allRides; track $index) {
+        <tr>
+          <td>
+            <a [routerLink]="['/list/' + ride.id]">
+              {{ ride.addressFrom }}
+            </a>
+          </td>
+          <td>{{ ride.addressTo }}</td>
+          <td>{{ ride.date }}</td>
+          <td>{{ ride.time }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

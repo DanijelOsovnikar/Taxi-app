@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./vars/vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $mainFont;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+app-root {
+  display: flex;
+  justify-content: center;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

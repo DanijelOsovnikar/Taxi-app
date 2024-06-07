@@ -1,0 +1,280 @@
+@import "../../../vars/vars";
+
+.hero {
+  width: 100%;
+  padding: 60px 50px 50px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    width: 40%;
+    position: relative;
+    h1 {
+      font-size: 3rem;
+      margin: 0 10px 30px 0;
+    }
+    p {
+      width: 80%;
+      margin: 30px 10px 30px 0;
+      // background-color: $mainAccentColor;
+      background: url("../../../assets/Brush.png");
+      background-repeat: no-repeat;
+      background-size: 200%;
+      background-position: 100%;
+      padding: 50px 15px;
+      border-radius: 15px;
+    }
+    button {
+      border: none;
+      outline: none;
+      padding: 10px 25px;
+      background-color: $backgroundColor;
+      color: $textColor;
+      border-radius: 15px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    width: 60%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.formSection {
+  width: 100%;
+  padding: 30px 50px 50px 50px;
+  display: flex;
+  justify-content: space-between;
+
+  #map {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 20px;
+    margin: 0 15px 0 0;
+  }
+}
+
+.form {
+  width: 48%;
+  padding: 0 20px;
+  background-color: $backgroundColor;
+  border-radius: 20px;
+
+  form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+
+    input {
+      min-width: 200px;
+      width: 80%;
+      border: none;
+      outline: none;
+      padding: 10px;
+      background-color: $grayColor;
+      color: black;
+      border-radius: 10px;
+      margin: 10px 0 20px 0;
+    }
+
+    label {
+      color: $textColor;
+    }
+
+    .card {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      background: unset;
+
+      [id="cardNumber"] {
+        width: unset;
+      }
+
+      .wrapperCardDate {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      [id="cardDate"] {
+        width: 20%;
+        min-width: unset;
+        margin-right: 20px;
+      }
+
+      [id="cardDate1"] {
+        width: 20%;
+        min-width: unset;
+      }
+    }
+
+    .priceAndSubmit {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+
+      h4 {
+        color: $textColor;
+        font-size: 2rem;
+      }
+    }
+
+    button {
+      padding: 10px 50px;
+      border-radius: 10px;
+      border: none;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+    }
+
+    p {
+      color: $textColor;
+      margin: 0 0 20px 0;
+    }
+
+    .paymentMethod {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 20px 0;
+
+      input {
+        width: 40%;
+        min-width: unset;
+        margin: unset;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1158px) {
+  .hero {
+    .left {
+      width: 50%;
+    }
+    .right {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  .formSection {
+    #map {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .formSection {
+    #map {
+      width: 25rem;
+      height: 25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .hero {
+    .left {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .form {
+    form {
+      button {
+        padding: 10px 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .formSection {
+    #map {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .hero {
+    .left {
+      width: 60%;
+    }
+    .right {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-wrap: wrap;
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+  .formSection {
+    flex-direction: column;
+    align-items: center;
+
+    #map {
+      width: 35rem;
+      height: 35rem;
+      margin: unset;
+      margin-bottom: 30px;
+    }
+  }
+  .form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .formSection {
+    #map {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .formSection {
+    #map {
+      width: 25rem;
+      height: 25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .formSection {
+    #map {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+}
