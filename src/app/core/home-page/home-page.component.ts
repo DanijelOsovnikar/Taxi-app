@@ -71,8 +71,6 @@ export class HomePageComponent implements OnInit {
         (hamburger as HTMLInputElement).checked = false;
       }
     }
-
-    this.service.saveData('arrayOfRides', JSON.stringify([]));
   }
 
   calculatePrice(e: any) {

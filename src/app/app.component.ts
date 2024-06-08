@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from './service/app.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'TaxiApp';
 
-  ngOnInit(): void {}
+  constructor(private service: AppService) {}
+
+  ngOnInit(): void {
+    this.service.saveData('arrayOfRides', JSON.stringify([]));
+  }
 }
