@@ -25,11 +25,11 @@ export class AppService {
   private ride = new BehaviorSubject(new Ride(this.obj));
   getRide = this.ride.asObservable();
 
-  constructor() {}
-
   setRide(ride: Ride) {
     this.ride.next(ride);
   }
+
+  constructor() {}
 
   key = '123';
 
