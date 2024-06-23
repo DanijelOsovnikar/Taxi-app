@@ -19,8 +19,10 @@
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 768px) {
   .listWrapper {
-    height: unset;
+    .list {
+      padding: 0 10px;
+    }
   }
 }

@@ -52,8 +52,12 @@
   display: flex;
   justify-content: space-between;
 
+  .mapSection {
+    width: 50%;
+  }
+
   #map {
-    width: 40rem;
+    width: 100%;
     height: 40rem;
     border-radius: 20px;
     margin: 0 15px 0 0;
@@ -174,8 +178,7 @@
 @media screen and (max-width: 1175px) {
   .formSection {
     #map {
-      width: 30rem;
-      height: 30rem;
+      height: 40rem;
     }
   }
 }
@@ -183,8 +186,7 @@
 @media screen and (max-width: 992px) {
   .formSection {
     #map {
-      width: 25rem;
-      height: 25rem;
+      height: 40rem;
     }
   }
 }
@@ -209,8 +211,7 @@
 @media screen and (max-width: 900px) {
   .formSection {
     #map {
-      width: 20rem;
-      height: 20rem;
+      height: 35rem;
     }
   }
 }
@@ -244,8 +245,11 @@
     flex-direction: column;
     align-items: center;
 
+    .mapSection {
+      width: 100%;
+    }
+
     #map {
-      width: 35rem;
       height: 35rem;
       margin: unset;
       margin-bottom: 30px;
@@ -259,7 +263,6 @@
 @media screen and (max-width: 610px) {
   .formSection {
     #map {
-      width: 30rem;
       height: 30rem;
     }
   }
@@ -269,7 +272,6 @@
   .formSection {
     padding: 30px 30px 50px 30px;
     #map {
-      width: 25rem;
       height: 25rem;
     }
   }
@@ -278,7 +280,6 @@
 @media screen and (max-width: 490px) {
   .formSection {
     #map {
-      width: 20rem;
       height: 20rem;
     }
   }
